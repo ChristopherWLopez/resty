@@ -9,6 +9,7 @@ html, body {
 body {
   background: $backgroundColor;
   height: 100%;
+  color: #6e1010;
 
   #root {
     display: flex;
@@ -17,8 +18,8 @@ body {
   }
 
   footer {
-    background: darken($backgroundColor, 50);
-    border-top: 1px solid #eee;
+    background: darken($backgroundColor, 15);
+    border-top: 4px solid #6e1010;
     padding: 1em 3em;
     margin: 0;
   }
@@ -26,9 +27,15 @@ body {
   header {
     background: darken($backgroundColor, 75);
     border-bottom: 1px solid #eee;
-    color: #eee;
+    color: #27dfdfb4;
     padding: 0;
     margin: 0;
     text-align: center;
+  }
+
+  form{
+    color: rgb(4, 108, 140);
+    background: darken($backgroundColor, 20);
+    
   }
 }
