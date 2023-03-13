@@ -12,6 +12,11 @@ import Form from './components/Form';
 import Results from './components/Results';
 import { OpenAI } from './OpenAI';
 
+const historyState =  {
+  results: null,
+  history: []
+};
+
 const App =()=> {
 
 const [data, setData] = useState(null);
