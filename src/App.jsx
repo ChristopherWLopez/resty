@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useReducer } from 'react';
 
 import './App.scss';
 
@@ -13,8 +13,11 @@ import Results from './components/Results';
 import { OpenAI } from './OpenAI';
 
 const historyState =  {
-  results: null,
-  history: []
+ loading:false,
+ daa:null,
+ requesParams:{},
+  requestJson: {},
+  history: [],
 };
 
 const App =()=> {
