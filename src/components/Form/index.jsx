@@ -42,7 +42,11 @@ const Form = ({handleApiCall}) => {
             <input type="radio" value="DELETE" name="method" onChange={(e)=> setMethod(e.target.value)} />DELETE
           </label>
           <label> 
-            <textarea value={text} onChange={(e)=> changeText(e.target.value)}></textarea>
+            <textarea 
+            value={text} 
+            row="12"
+            cols="80"
+            onChange={(e)=> changeText(e.target.value)}></textarea>
           </label>
         </form>
 
