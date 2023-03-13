@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useReducer } from 'react';
 
 import './App.scss';
 
@@ -10,11 +10,20 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Form from './components/Form';
 import Results from './components/Results';
+import { OpenAI } from './OpenAI';
+
+const historyState =  {
+ loading:false,
+ daa:null,
+ requesParams:{},
+  requestJson: {},
+  history: [],
+};
 
 const App =()=> {
 
 const [data, setData] = useState(null);
-const[requestParams, setrequestParams] = useState({});
+const[requestParams, setrequestParams] = useState({method: '', params: ''});
 
   const callApi = (requestParams) => {
     // mock output
@@ -33,6 +42,7 @@ const[requestParams, setrequestParams] = useState({});
     return (
       <React.Fragment>
         <Header />
+        <OpenAI />
         <div>Request Method: {requestParams.method}</div>
         <div>URL: {requestParams.url}</div>
         <Form handleApiCall={callApi} />
