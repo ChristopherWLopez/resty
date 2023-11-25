@@ -1,7 +1,6 @@
 import React, { useState, useReducer } from 'react';
 
 import './App.scss';
-
 // Let's talk about using index.js and some other name in the component folder.
 // There's pros and cons for each way of doing this...
 // OFFICIALLY, we have chosen to use the Airbnb style guide naming convention. 
@@ -13,7 +12,7 @@ import Results from './components/Results';
 import { OpenAI } from './OpenAI';
 
 const historyState =  {
- loading:false,
+ loading: false,
  daa:null,
  requesParams:{},
   requestJson: {},
@@ -45,7 +44,7 @@ const[requestParams, setrequestParams] = useState({method: '', params: ''});
         <OpenAI />
         <div>Request Method: {requestParams.method}</div>
         <div>URL: {requestParams.url}</div>
-        <Form handleApiCall={callApi} />
+        <Form handleApiCall={callApi}/>
         <Results data={data} />
         <Footer />
       </React.Fragment>
